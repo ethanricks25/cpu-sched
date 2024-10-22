@@ -9,12 +9,21 @@ class Task {
 	public:
 		string name;
 		int priority;
+		int tid;
 		int burst;
+		bool hasStarted;
 
-		Task(string taskName, int taskPriority, int taskBurst){
+		int completionTime;
+		int waitingTime;      // Waiting time
+		int turnaroundTime;   // Turnaround time
+		int responseTime;
+
+		Task(string taskName, int taskPriority, int taskBurst, int newTid){
 			name = taskName;
 			priority = taskPriority;
 			burst = taskBurst;
+			hasStarted = false;
+			tid = newTid;
 		}
 
 };

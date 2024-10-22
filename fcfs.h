@@ -6,5 +6,6 @@
 
 void schedule(list<Task> &taskList);
 Task pickNextTask(list<Task> &taskList);
+void calculateAverages(list<Task> processInfo);
 
 #endif

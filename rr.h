@@ -5,4 +5,5 @@
 #include "task.h"
 
 void schedule(list<Task> &taskList);
+void calculateAverages(list<Task> processInfo);
 #endif
