@@ -39,8 +39,8 @@ void calculateAverages(list<Task> processInfo){
 		totalRT += process.responseTime;
 	}
 
-	cout << "Average Waiting Time: " << (float)totalWT / processInfo.size() << "milliseconds" << endl;
-    cout << "Average Turnaround Time: " << (float)totalTAT / processInfo.size() <<  "milliseconds" << endl;
-    cout << "Average Response Time: " << (float)totalRT / processInfo.size() <<  "milliseconds" << endl;
+	cout << "Average Waiting Time: " << (float)totalWT / processInfo.size() << " milliseconds" << endl;
+    cout << "Average Turnaround Time: " << (float)totalTAT / processInfo.size() <<  " milliseconds" << endl;
+    cout << "Average Response Time: " << (float)totalRT / processInfo.size() <<  " milliseconds" << endl;
 }
 

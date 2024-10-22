@@ -42,10 +42,14 @@ int main(int argc, char *argv[]) {
 	if (pthread_attr_getscope(&attr, &scope) != 0)
 	    fprintf(stderr, "Unable to get scheduling scope\n");
 	else {
-	    if (scope == PTHREAD_SCOPE_PROCESS)
+	    if (scope == PTHREAD_SCOPE_PROCESS){
 	     printf("PTHREAD_SCOPE_PROCESS");
-	    else if (scope == PTHREAD_SCOPE_SYSTEM)
+		 cout << endl;
+		}
+	    else if (scope == PTHREAD_SCOPE_SYSTEM){
 	     printf("PTHREAD_SCOPE_SYSTEM");
+		 cout << endl;
+		}
 	    else
 	     fprintf(stderr, "Illegal scope value.\n");
 	}
@@ -53,8 +57,13 @@ int main(int argc, char *argv[]) {
 	pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
 	 
 	/* create the threads */
-	for (i = 0; i < NUM_THREADS; i++)
+	for (i = 0; i < NUM_THREADS; i++){
+		if (i == 0){
+			pthread_create(&tid[i], NULL, runner, (void *)&taskList);
+		}else {
 	     pthread_create(&tid[i],&attr,runner,NULL);
+		}
+	}
 	 
 	  /* now join on each thread */
 	  for (i = 0; i < NUM_THREADS; i++)
