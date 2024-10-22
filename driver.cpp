@@ -11,7 +11,9 @@
 #include "sjf.h"
 #include "srtf.h"
 #define NUM_THREADS 5
-
+/*
+ * Link to Github for header files https://github.com/ethanricks25/cpu-sched
+ */
 using namespace std;
 
 int nextTID = 0;
